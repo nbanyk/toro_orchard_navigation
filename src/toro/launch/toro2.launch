@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="toro" name="pointCloud_ROSconversion" type="pointCloud_ROSconversion"/>
+  <node pkg="toro" name="icp_node" type="icp_node"/>
+  <node pkg="toro" name="ransac_linefitting_node" type="ransac_linefitting_node"/>
+  <node pkg="toro" name="ekf_node" type="ekf_node"/>
+  <node pkg="toro" name="driver_sub_node" type="driver_sub_node"/>
+  <!--<node pkg="nmea_navsat_driver" name="nmea_topic_serial_reader" type="nmea_topic_serial_reader">
+     <param name="_port" value="/dev/ttyUSB1"/>
+     <param name="_baud" value="9600"/>
+  </node>-->
+  <!--<node pkg="toro" name="lateral_line_offset_node" type="lateral_line_offset_node"/>--> <!-- take this out if and run manually if want to adjust the offsets-->
+  <!--<node pkg="toro" name="nearest_tree_pf" type="nearest_tree_pf"/> THIS IS NOT WORKING IN THE LAUNCH FILE, SO JUST RUN IT SEPARATELY -->
+</launch>

@@ -1,0 +1,17 @@
+<launch> 
+   <!--<node pkg="nmea_navsat_driver" name="nmea_topic_serial_reader" type="nmea_topic_serial_reader">
+     <param name="_port" value="/dev/ttyUSB1"/>
+     <param name="_baud" value="9600"/>
+   </node>-->
+  <node pkg="toro" name="sweepLaser_pub_node" type="sweepLaser_pub_node"/>
+  <node pkg="toro" name="smart_motor_sub_node" type="smart_motor_sub_node"/>
+  <node type="laser_scan_assembler" pkg="laser_assembler" name="my_assembler">
+    <!--<remap from="scan" to="tilt_scan"/>-->
+    <param name="max_scans" type="int" value="350" /> <!-- bring back value to 350 if possible -->
+    <param name="fixed_frame" type="string" value="world" />
+  </node>
+  <node pkg="toro" name="periodic_snapshotter" type="periodic_snapshotter"/>
+  <node pkg="rviz" name="rviz" type="rviz"/>
+  <node pkg="toro" name="state_pub_node" type="state_pub_node"/>
+
+</launch>

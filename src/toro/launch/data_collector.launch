@@ -1,0 +1,14 @@
+<!-- This file launches the log file creator nodes. The log files are located here: /home/randy/catkin_ws2/src/toro/logs/data_collector_logs/ The data recorded includes the nearest tree positions, the tree lines from the random sample consensus, extended kalman filter, and lateral line offset algorithms, transforms, average row width, and nearest tree branch distance -->
+
+<launch> 
+
+  <node pkg="toro" name="data_collector1" type="data_collector1"/>
+  <node pkg="toro" name="data_collector2" type="data_collector2"/>
+  <node pkg="toro" name="data_collector3" type="data_collector3"/>
+  <node pkg="toro" name="data_collector4" type="data_collector4"/>
+  <node pkg="toro" name="data_collector5" type="data_collector5"/>
+  <node pkg="toro" name="data_collector6" type="data_collector6"/>
+  <node pkg="toro" name="data_collector7" type="data_collector7"/>
+  <node pkg="toro" name="data_collector8" type="data_collector8"/>
+
+</launch>
